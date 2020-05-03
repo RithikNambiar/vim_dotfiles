@@ -30,5 +30,5 @@ Note: --clang-completer was used a few years ago.It has since changed to --clang
 
 Extract syntax highlighting files for UPF, SDC to ~/.vim/syntax
 
-UPF syntax files ownloaded from : https://www.vim.org/scripts/script.php?script_id=5420
+UPF syntax files downloaded from : https://www.vim.org/scripts/script.php?script_id=5420
 
