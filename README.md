@@ -23,5 +23,5 @@ $ cd ~/.vim/bundle/youcompleteme
 
 $ python3 ./install.py --clangd-completer
 
-Note --clang-completer was used a few years ago.It has since changed to clangd-completer
+Note: --clang-completer was used a few years ago.It has since changed to --clangd-completer
 
