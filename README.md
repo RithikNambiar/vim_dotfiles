@@ -1,5 +1,7 @@
 # vim_dotfiles
 
+Install Vundle Plugin Manager first:https://github.com/VundleVim/Vundle.vim (installation instructions)
+
 
 Contains vim dotfiles configured for verilog, C++
 
