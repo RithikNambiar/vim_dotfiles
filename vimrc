@@ -95,6 +95,10 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 """""""""""""""""""""""""""""""""""""""""""""""""""""ale linter settings""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on
 
+let g:ale_linters = {
+\   'verilog': ['verilator'],
+\}                                              "set verilator to user verilator as linter instead of iverilog
+
 "let g:ale_sign_column_always = 1
 let g:ale_statusline_format = ['ERR: %d', 'WARN: %d', 'ok']
 let g:ale_echo_msg_error_str = 'E'
@@ -115,15 +119,3 @@ endif
 "au VimEnter * NERDTreeToggle /home/rithik/projects "alternate implementation is on the next line
 autocmd vimenter * NERDTree /home/rithik/projects
 nmap <F2> :NERDTreeToggle<CR>
-
-
-
-
-
-
-
-
-
-
-
-
