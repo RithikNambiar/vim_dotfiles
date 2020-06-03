@@ -119,3 +119,4 @@ endif
 "au VimEnter * NERDTreeToggle /home/rithik/projects "alternate implementation is on the next line
 autocmd vimenter * NERDTree /home/rithik/projects
 nmap <F2> :NERDTreeToggle<CR>
+
