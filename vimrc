@@ -5,7 +5,7 @@
 ""                It has better colorschemes & improved aesthetics in general                                                            ""
 ""                It is quite messy, will be cleaned up soon                                                                             ""
 ""                                                                                                                                       ""
-""                                                                                                                                       "" 
+""                                                                                                                                       ""
 ""                                                                                                                                       ""
 ""                                                                                                                                       ""
 ""                                                                                                                                       ""
