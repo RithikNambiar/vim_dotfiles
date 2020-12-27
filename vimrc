@@ -1,12 +1,22 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"      NOTES:  This is the newer version that supports general windows keybinds like Ctrl-x,Ctrl-C, Ctrl-V, Ctrl-Z, Ctrl-S, etc
-"              It also has transparency effect for gvim-windows 
-"              It has better colorschemes & improved aesthetics in general
-"              It is quite messy, will be cleaned up soon
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""       NOTES:   This is the newer version that supports general windows keybinds like Ctrl-x,Ctrl-C, Ctrl-V, Ctrl-Z, Ctrl-S, etc       ""
+""                It also has transparency effect for gvim-windows                                                                       ""
+""                It has better colorschemes & improved aesthetics in general                                                            ""
+""                It is quite messy, will be cleaned up soon                                                                             ""
+""                                                                                                                                       ""
+""                                                                                                                                       "" 
+""                                                                                                                                       ""
+""                                                                                                                                       ""
+""                                                                                                                                       ""
+""         !!!!!!!!         Edit path names wherever they appear in this file as it was configured for my setup         !!!!!!!!         ""
+""                                                                                                                                       ""
+""                                                                                                                                       ""
+""                                                                                                                                       ""
+""                                                                                                                                       ""
+""                                                                                                                                       ""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Vim with all enhancements
 source $VIMRUNTIME/vimrc_example.vim
