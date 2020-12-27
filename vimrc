@@ -1,3 +1,13 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"      NOTES:  This is the newer version that supports general windows keybinds like Ctrl-x,Ctrl-C, Ctrl-V, Ctrl-Z, Ctrl-S, etc
+"              It also has transparency effect for gvim-windows 
+"              It has better colorschemes & improved aesthetics in general
+"              It is quite messy, will be cleaned up soon
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Vim with all enhancements
 source $VIMRUNTIME/vimrc_example.vim
 
