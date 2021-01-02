@@ -76,8 +76,9 @@ set undolevels=1000           " How many undos
 set undoreload=10000          " number of lines to save for undo
 set shiftwidth=2              " press '>' to indent by the number set in 'shiftwidth'
 "set smartindent
-"set tabstop=4
-hi Normal guibg=NONE ctermbg=NONE        "transparent mode
+set tabstop=4
+set expandtab
+"hi Normal guibg=NONE ctermbg=NONE        "transparent mode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""'vundle config""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle {{{1
 
@@ -105,7 +106,7 @@ Plugin 'VundleVim/Vundle.vim'
 "./install.py --clang-completer
 "for youcompleteme ------USE THIS TO ENABLE SUPPORT FOR C/C++/CUDA/C#  - the C family of languages 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""Vundle Plugins Installation""""""""""""""""""""""""""""""""""""""
 "Plugin 'scrooloose/syntastic'
 "Plugin 'jaxbot/semantic-highlight.vim'   works for C/C++, not for verilog
 Plugin 'dense-analysis/ale'
@@ -115,16 +116,19 @@ Plugin 'joshdick/onedark.vim' "  place 'colo onedark'   after the vundle config 
 Plugin 'townk/vim-autoclose'
 Plugin 'preservim/nerdtree'
 Plugin 'tpope/vim-vividchalk'
-Plugin 'junegunn/fzf'
+Plugin 'vhda/verilog_systemverilog.vim'           "support for cadence & symopsys error formats
+"Plugin 'junegunn/fzf'
 Plugin 'yggdroot/indentline'
 Plugin 'AutoComplPop'        " autocomplete
+Plugin 'ap/vim-buftabline'
+Plugin 'sirver/ultisnips'
 "Plugin 'severin-lemaignan/vim-minimap'   "minimap
 "Plugin 'wfxr/minimap.vim'
 Plugin 'morhetz/gruvbox'  "colorscheme
-Plugin 'godlygeek/csapprox' "colorscheme
-Plugin 'NLKNguyen/papercolor-theme'  "colorscheme
-Plugin 'zefei/cake16'   "colorscheme
-Plugin 'altercation/vim-colors-solarized'   "colorscheme
+"Plugin 'godlygeek/csapprox' "colorscheme
+"Plugin 'NLKNguyen/papercolor-theme'  "colorscheme
+"Plugin 'zefei/cake16'   "colorscheme
+"Plugin 'altercation/vim-colors-solarized'   "colorscheme
 "Plugin 'chriskempson/base16-vim'   "colorscheme
 "Plugin 'wimproved.vim'
 "Plugin 'neoclide/coc.nvim'   " autocomplete
@@ -203,7 +207,8 @@ let g:ale_set_loclist = 0
 
 " only enable these linters
 let g:ale_linters = {
-\    'verilog': ['vlog']
+\    'verilog': ['vlog'],
+"\    'verilog': ['iverilog']
 \}
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
@@ -212,12 +217,16 @@ nmap <silent> <C-J> <Plug>(ale_next_wrap)
 let g:ale_lint_on_enter = 1 " 0 means dont run and 1 means run on opening the file
 let g:ale_lint_on_save = 1  " lint on saving the file if value of this variable is '1' 
 let g:ale_verilog_vlog_options = '-nologo -lint -hazards -work F:\Vim\ale_linter\modelsim_lint\work'
+"let g:verilog_iverilog_options = 'iverilog -t null -Wall'
 let g:ale_list_window_size = 10
 
 let g:ale_set_highlights = 1
 let g:ale_set_balloons = 1
 let g:ale_hover_to_preview = 1
+
 highlight link ALEErrorLine error "highlight line containing error in red
+"highlight link ALEInfoLine 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""NERDTree settings"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "let NERDTreeMinimalUI = 1  "disable press? to get help at the top of nerdtree buffer when value = 1
@@ -230,8 +239,8 @@ nmap <F2> :NERDTreeToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""gruvbox config""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:gruvbox_contrast_dark = 'hard'
-"let g:gruvbox_contrast_light = 'hard'
-"let g:gruvbox_transparent_bg = '1'
+let g:gruvbox_contrast_light = 'hard'
+let g:gruvbox_transparent_bg = '1'
 set bg=dark
 colorscheme gruvbox
 set cursorline
@@ -252,16 +261,26 @@ set t_Co=256   " This is may or may not needed.
 "set background=light
 "colorscheme solarized
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""window transparency config"""""""""""""""""""""""""""""""""""""""""""""""
 
-Plugin 'mattn/vimtweak'
-Plugin 'mattn/transparency-windows-vim'
+"Plugin 'mattn/vimtweak'
+"Plugin 'mattn/transparency-windows-vim'
 Plugin 'wimproved.vim'
+"Plugin 'tsuyoshicho/transparency.vim'
 
 autocmd GUIEnter * silent! WToggleClean
+
 "autocmd GUIEnter * silent! WToggleFullscreen
 nmap <F11> :WToggleFullscreen<CR>
 
+"let g:transparency_config = {
+"      \  'active'   : 90,
+"      \  'inactive' : 70
+"      \ }
+
+"let g:transparency_startup_enable = 1 "it is 1 by default
+"nmap <F3> <Plug>(TransparencyToggle)
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""shortcut to change font size"""""""""""""""""""""""""""""""""""""""""""""""
@@ -291,4 +310,16 @@ syntax match TODOs ".*TODO.*\|.*BUG.*\|.*BROKEN.*\|.*ERROR.*\|.*INCOMPLETE.*\|.*
                       \*REFER.*\|.*COMPLETEME.*\|.*WARNING.*\|.*NOTE.*\|.*NOTES.*\|.*INFO.*"
 "highlight TODOs ctermbg=red ctermfg=yellow term=bold,italic
 
-highlight TODOs guibg='Purple' guifg='White'   "term=bold cterm=bold
+highlight TODOs guibg='Purple' guifg='White' "ctermbg=purple ctermfg=white term=bold cterm=bold
+nnoremap <F6> :source $MYVIMRC<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""Buffers as Tabs""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"Plugin 'ap/vim-buftabline'
+
+set hidden
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
+
+
+"hi Normal guibg=NONE
