@@ -216,7 +216,7 @@ nmap <silent> <C-J> <Plug>(ale_next_wrap)
 
 let g:ale_lint_on_enter = 1 " 0 means dont run and 1 means run on opening the file
 let g:ale_lint_on_save = 1  " lint on saving the file if value of this variable is '1' 
-let g:ale_verilog_vlog_options = '-nologo -lint -hazards -work F:\Vim\ale_linter\modelsim_lint\work'
+let g:ale_verilog_vlog_options = '-nologo -lint -hazards -work F:\Vim\ale_linters\modelsim_lint\work'
 "let g:verilog_iverilog_options = 'iverilog -t null -Wall'
 let g:ale_list_window_size = 10
 
