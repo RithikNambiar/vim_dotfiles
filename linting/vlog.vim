@@ -35,8 +35,8 @@ function! ale_linters#verilog#vlog#Handle(buffer, lines) abort
     "Matches patterns like the following:
     "** Warning: add.v(7): (vlog-2623) Undefined variable: C.
     "** Error: file.v(1): (vlog-13294) Identifier must be declared with a port mode: C.
-    "let l:pattern = '^**\s\(\w*\):[a-zA-Z0-9\-\.\_\/ ]\+(\(\d\+\)):\s\+\(.*\)'     "ORIGINAL REGEX
-    let l:pattern = '^**\s\(\w*\):[a-zA-Z0-9\-\.\_\/:~ ]\+(\(\d\+\)):\s\+\(.*\)'
+    "let l:pattern = '^**\s\(\w*\):[a-zA-Z0-9\-\.\_\/ ]\+(\(\d\+\)):\s\+\(.*\)'        "ORIGINAL REGEX
+    let l:pattern = '^**\s\(\w*\):[a-zA-Z0-9\-\.\_\/:~ ]\+(\(\d\+\)):\s\+\(.*\)'       "MODIFIED REGEX
     "https://github.com/dense-analysis/ale/issues/3340   to know more about the reason the original regex has been modified, go to this link
     let l:output = []
 
@@ -52,8 +52,8 @@ function! ale_linters#verilog#vlog#Handle(buffer, lines) abort
     "** Warning: (vlog-2623) add.v(7): Undefined variable: C.
     "** Error: (vlog-13294) file.v(1): Identifier must be declared with a port mode: C.
     " let l:pattern = '^**\s\(\w*\):[a-zA-Z0-9\-\.\_\/ ]\+(\(\d\+\)):\s\+\(.*\)'
-    "let l:pattern = '^**\s\(\w*\):\s\([^)]*)\)[a-zA-Z0-9\-\.\_\/ ]\+(\(\d\+\)):\s\+\(.*\)'    "ORIGINAL REGEX
-     let l:pattern = '^**\s\(\w*\):\s\([^)]*)\)[a-zA-Z0-9\-\.\_\/:~ ]\+(\(\d\+\)):\s\+\(.*\)'
+    "let l:pattern = '^**\s\(\w*\):\s\([^)]*)\)[a-zA-Z0-9\-\.\_\/ ]\+(\(\d\+\)):\s\+\(.*\)'        "ORIGINAL REGEX
+     let l:pattern = '^**\s\(\w*\):\s\([^)]*)\)[a-zA-Z0-9\-\.\_\/:~ ]\+(\(\d\+\)):\s\+\(.*\)'      "MODIFIED REGEX
 
     for l:match in ale#util#GetMatches(a:lines, l:pattern)
         call add(l:output, {
