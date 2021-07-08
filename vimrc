@@ -63,7 +63,7 @@ function MyDiff()
 endfunction
 
 """""""""""""""""""""""""""""""""""""""""""""""""""user defined functions""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set relativenumber
+set relativenumber
 set number
 
 "set guifont=Courier_New:h11
@@ -234,7 +234,8 @@ highlight link ALEErrorLine error "highlight line containing error in red
 "au VimEnter * NERDTreeToggle /home/rithik/projects "alternate implementation is on the next line
 autocmd vimenter * NERDTree H:\projects\ray_tracing
 nmap <F2> :NERDTreeToggle<CR>
-
+nmap <S-F2> :NERDTreeFocus<cr>r<c-w><c-p> " press shift + f2 to refresh nerdtree
+"autocmd vimenter * NERDTreeToggle "toggle nerdtree to off on startup
 
 """"""""""""""""""""""""""""""""""""""""""""""""""gruvbox config""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
