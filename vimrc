@@ -118,6 +118,8 @@ Plugin 'preservim/nerdtree'
 Plugin 'tpope/vim-vividchalk'
 Plugin 'vhda/verilog_systemverilog.vim'           "support for cadence & symopsys error formats
 "Plugin 'junegunn/fzf'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'yggdroot/indentline'
 Plugin 'AutoComplPop'        " autocomplete
 Plugin 'ap/vim-buftabline'
@@ -154,6 +156,15 @@ syntax on
 "vmap <C-v> c<ESC>"+p
 "imap <C-v> <C-r><C-o>+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""  Fugitive & Git-gutter config"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gitgutter_git_executable = 'F:\Git\bin\git.exe'
+nmap <F3> :GitGutterToggle<CR>
+"nmap <S-F3> :GitGutterLineNrHighlightsToggle<CR>
+nnoremap <S-F3> :GitGutterLineNrHighlightsToggle<cr>
+nmap <F4> :GitGutterLineHighlightsToggle<CR>
 
 """"""""""""""""""""""""""""""""""clangd config for YouCompleteMe"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Let clangd fully control code completion
