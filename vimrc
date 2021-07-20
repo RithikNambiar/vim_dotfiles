@@ -75,6 +75,7 @@ set undodir=F:\Vim\.vim_undo_files " where to save undo histories
 set undolevels=1000           " How many undos
 set undoreload=10000          " number of lines to save for undo
 set backupdir=F:\Vim\backup_files_dir
+set directory=F:\Vim\swap_files_dir
 set shiftwidth=2              " press '>' to indent by the number set in 'shiftwidth'
 "set smartindent
 set tabstop=4
