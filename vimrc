@@ -338,3 +338,5 @@ nnoremap <C-P> :bprev<CR>
 
 
 "hi Normal guibg=NONE
+
+au GUIEnter * simalt ~x       " maximised window on startup
