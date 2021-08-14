@@ -258,7 +258,7 @@ let g:gruvbox_transparent_bg = '1'
 set bg=dark
 colorscheme gruvbox
 set cursorline
-hi CursorLine term=bold cterm=bold guibg=Grey30  "guifg='White'
+hi CursorLine term=bold cterm=bold cterm=underline guibg=Black"Grey20 "guifg='White'
 hi CursorIM       guifg=#87CEEB "#FFFFFF "#87CEEB "#F8F8F8           "guibg=#002947
 hi Cursor         guifg=#87CEEB "#FFFFFF "#87CEEB "#F8F8F8           "guibg=#A7A7A7
 
